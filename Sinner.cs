@@ -12,22 +12,19 @@ internal class Sinner
     public double Amplitude { get; set; } = amplitude;
     public int Channels { get; set; } = channels;
     public int FrameRate { get; set; } = frameRate;
-    public Wave Wave
+    public Wave Wave()
     {
-        get
+        Wave wave = global::Wave.WithDuration(Duration, Channels, FrameRate);
+        for (int frame = 0; frame < wave.FramesCount; frame++)
         {
-            Wave wave = Wave.WithDuration(Duration, Channels, FrameRate);
-            for (int frame = 0; frame < wave.Frames; frame++)
+            double time = MzMath.IndexToTime(frame, wave.FrameRate);
+            double part = time * Frequency % 1.0;
+            double sample = WaveForms.Sin(part) * Amplitude;
+            for (int channel = 0; channel < wave.ChannelsCount; channel++)
             {
-                double time = MzMath.IndexToTime(frame, wave.FrameRate);
-                double part = time * Frequency % 1.0;
-                double sample = WaveForms.Sin(part) * Amplitude;
-                for (int channel = 0; channel < wave.Channels; channel++)
-                {
-                    wave[channel, frame] = sample;
-                }
+                wave[channel, frame] = sample;
             }
-            return wave;
         }
+        return wave;
     }
 }
