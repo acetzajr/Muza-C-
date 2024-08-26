@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Muza", "Muza.csproj", "{086F098E-E84A-4F20-A801-20C617FFBF0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{086F098E-E84A-4F20-A801-20C617FFBF0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{086F098E-E84A-4F20-A801-20C617FFBF0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{086F098E-E84A-4F20-A801-20C617FFBF0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{086F098E-E84A-4F20-A801-20C617FFBF0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA4EBD7D-0A87-4294-8295-0DE1B8AA9D8D}
+	EndGlobalSection
+EndGlobal
